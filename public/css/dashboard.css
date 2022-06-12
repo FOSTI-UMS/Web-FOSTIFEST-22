@@ -1,0 +1,240 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#navbar{
+    width: 330px;
+    padding: 4px;
+    background-color: #ebf6ff;
+    height: 100vh;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
+    transition-duration: 1s;
+    overflow: hidden;
+    left: -330px;
+    z-index: 2;
+}
+
+.active{
+    left: 0 !important;
+}
+
+#content{
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.nav-menu{
+    padding: 20px 10px;
+    border-bottom: 1px solid #005571;
+}
+
+.nav-menu a{
+    height: 25px !important;
+}
+
+.nav-menu a:hover{
+    background-color: rgba(255, 255, 255, 0.462) !important;
+}
+
+.nav-item p{
+    background: linear-gradient(to right, #369A90, #005571);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.nav-item:nth-child(1) p span{
+    -webkit-text-fill-color: black;
+    padding: 0px;
+}
+
+.nav-item:nth-child(1) p span{
+    -webkit-text-fill-color: black;
+    padding: 0px;
+}
+
+.nav-active{
+    font-weight: bold;
+    border-left: 4px solid black;
+    padding-left: 5px
+}
+
+.button-logout{
+    bottom: 30px;
+}
+
+.tag-logo{
+    margin: 0 0 0 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #01435A;
+}
+
+.tag-logo span{
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+}
+
+.nav-top, .nav-bot{
+    background-color: #ebf6ff;
+    height: 10vh;
+}
+
+.nav-top{
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bot .nav-title{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.hamburger{
+    width: fit-content;
+    height: fit-content;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger .line{
+    height: 3px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.hamburger .line:nth-child(2){
+    margin: 5px 0;
+}
+
+.nav-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+}
+
+.main-content{
+    width: 100%;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.main-content .container{
+    height: 100%;
+}
+
+table{
+    overflow: auto;
+}
+
+.tag-fostifest{
+    background: linear-gradient(to right, #369A90, #005571);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent !important;
+    font-size: 128px !important;
+    font-weight: 600;
+}
+
+.paginate_button{
+    background-color: grey;
+    padding: 5px 3px;
+    color: black;
+    text-decoration: none;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.input-form{
+    margin: 16px 0;
+}
+
+.form-limit{
+    margin: 30px 0;
+    /* font-size: 36px; */
+}
+
+.label{
+    left: 20px;
+    top: -12px;
+    background-color: white;
+    padding: 0 5px;
+    transition-duration: 0.5s;
+}
+
+.form-input{
+    width: 500px;
+    height: 54px;
+    border-radius: 8px;
+    border: 1px solid #D0D0D0;
+}
+
+.req{
+    right: 20px;
+    top: 18px;
+    color: red;
+    min-width: 9px;
+}
+
+input[type=submit] {
+    margin: 20px 0;
+    background-color: rgb(0, 136, 173);
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size:16px;
+    font-weight: bold;
+    line-height: 1.4;
+    padding: 10px;
+    width: 180px
+  }
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+select {
+    background-color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+#form-input-file{
+    width: 500px;
+    border-radius: 8px;
+    height: 100%;
+    border: 1px solid #D0D0D0 !important;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    display: none;
+}
+.custom-file-input::before {
+    content: 'Choose';
+    display: inline-block;
+    background-color: #eee;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 15px 20px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 10pt;
+    margin-right: 10px !important;
+}
+.custom-file-input:hover::before {
+    border-color: black;
+    background-color: rgb(0, 136, 173);
+}
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
