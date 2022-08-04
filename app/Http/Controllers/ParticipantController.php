@@ -7,6 +7,9 @@ use App\Models\Member;
 use App\Models\Member1;
 use App\Models\Member2;
 use Illuminate\Http\Request;
+use App\Exports\member1CompExport;
+use App\Exports\memberCompExport;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Storage;
 
 class ParticipantController extends Controller
@@ -319,5 +322,10 @@ class ParticipantController extends Controller
         ]);
 
         return redirect('/dashboard-peserta/anggota');
+    }
+
+    public function export()
+    {
+        return Excel::download(new memberCompExport, 'peserta_lomba.xlsx');
     }
 }

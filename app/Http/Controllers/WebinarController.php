@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\memberWebExport;
+use App\Imports\memberWebImport;
 use App\Models\Webinar;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class WebinarController extends Controller
 {
@@ -73,5 +76,17 @@ class WebinarController extends Controller
             'payment' => $payment,
         ]);
         return redirect('/');
+    }
+
+    public function export()
+    {
+        return Excel::download(new memberWebExport, 'peserta_webinar.xlsx');
+    }
+
+    public function import()
+    {
+        Excel::import(new memberWebImport, request()->file('file'));
+
+        return back();
     }
 }

@@ -8,6 +8,7 @@ use App\Models\Leader;
 use App\Models\Member1;
 use App\Models\Member2;
 use App\Models\Webinar;
+use App\Mail\WebinarMail;
 use App\Models\Competition;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -160,5 +161,12 @@ class AdminController extends Controller
         Mail::to($competition->email)->send(new SendMail($dataSend));
 
         return redirect('/peserta-lomba-notverified');
+    }
+
+    public function sendMailUser(Webinar $webinar)
+    {
+        Mail::to($webinar->email)->send(new WebinarMail($webinar));
+
+        return redirect('/peserta-webinar')->with('success', 'Email sudah dikirim');
     }
 }

@@ -6,23 +6,26 @@
         </div>
         <div class="nav-menu d-flex flex-column align-items-center justify-content-center">
             <a href="{{ route('team') }}" class="text-decoration-none w-100 my-1">
-                <div class="nav-item nav-active text-white text-start">
+                <div class="nav-item {{ Route::is('team') ? 'nav-active' : '' }} text-white text-start">
                     <p>Tim {{ auth()->user()->competition->name }}</p>
                 </div>
             </a>
-            <a href="{{ route('leaderTeam') }}" class="text-decoration-none w-100 my-1">
+            <a href="{{ route('leaderTeam') }}"
+                class="text-decoration-none w-100 my-1 {{ Route::is('leaderTeam') ? 'nav-active' : '' }}">
                 <div class="nav-item text-white text-start">
                     <p>Ketua Tim</p>
                 </div>
             </a>
-            <a href="{{ route('memberTeam') }}" class="text-decoration-none w-100 my-1">
+            <a href="{{ route('memberTeam') }}"
+                class="text-decoration-none w-100 my-1 {{ Route::is('memberTeam') ? 'nav-active' : '' }}">
                 <div class="nav-item text-white text-start">
                     <p>Anggota</p>
                 </div>
             </a>
         </div>
         <div class="nav-menu d-flex flex-column align-items-center justify-content-center">
-            <a href="{{ route('guidelineTeam') }}" class="text-decoration-none w-100 my-1">
+            <a href="{{ route('guidelineTeam') }}"
+                class="text-decoration-none w-100 my-1 {{ Route::is('guidelineTeam') ? 'nav-active' : '' }}">
                 <div class="nav-item text-white text-start">
                     <p>Guideline book</p>
                 </div>

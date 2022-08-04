@@ -71,7 +71,8 @@
                 <div id="from-ums" class="">
                     <p class="form-limit text-start ms-4 fw-bold">KTM UMS</p>
                     <div class="input-form-file position-relative d-flex align-items-center">
-                        <input type="file" name="ktm" id="form-input-file" class="custom-file-input" placeholder="">
+                        <input type="file" name="ktm" id="form-input-file" class="custom-file-input" placeholder=""
+                            required>
                         <!-- <span class="req position-absolute">*</span> -->
                     </div>
                 </div>

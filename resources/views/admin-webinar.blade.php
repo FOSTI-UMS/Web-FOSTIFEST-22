@@ -27,9 +27,19 @@
             </p>
         </div>
     </div>
+    {{-- @if(session()->has('success'))
+    <div class="alert alert-success">
+        {{ session()->get('success') }}
+    </div>
+    @endif --}}
+    @if(session()->has('success'))
+    <script>
+        alert('Email berhasil di kirim');
+    </script>
+    @endif
     <div class="main-content d-flex justify-content-center align-items-center">
         <div class="container d-flex flex-column align-items-center justify-content-center position-relative">
-            <a href="#" class="btn btn-warning text-decoration-none text-white">Cetak</a>
+            <a href="{{ route('exportExcelWeb') }}" class="btn btn-warning text-decoration-none text-white">Cetak</a>
             <table id="example" class="table table-striped text-center" style="width:100%">
                 <thead>
                     <tr>
@@ -77,6 +87,11 @@
                                 @method('delete')@csrf<button type="submit"
                                     class="btn btn-danger text-decoration-none text-white"
                                     onclick="return confirm('Are you sure you want to delete this?')">Hapus</button>
+                            </form>
+                            <form action="{{ route('sendEmailUser', $wb->id) }}" method="post">
+                                @csrf
+                                <button type="submit" class="btn btn-success text-decoration-none text-white">Kirim
+                                    Email</button>
                             </form>
                         </td>
                     </tr>

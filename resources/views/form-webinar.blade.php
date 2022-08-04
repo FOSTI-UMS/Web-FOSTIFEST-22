@@ -23,9 +23,8 @@
 
 <body id="form-webinar" class="position-relative">
     <section class="d-flex">
-        <div
-            class="form-webinar-image d-none d-lg-flex justify-content-center align-items-center position-relative border border-1">
-            <img src="asset/bg-shadow-form.png" alt="">
+        <div class="form-webinar-image d-none d-lg-flex justify-content-center align-items-center position-relative">
+            <img src="asset/bg-form.png" alt="">
             <img src="asset/image-lock.png" class="position-absolute">
             <div class="form-sosmed position-absolute d-flex flex-column align-items-center">
                 <p class="form-sosmed-title">Find Us On</p>

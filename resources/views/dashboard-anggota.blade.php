@@ -90,50 +90,6 @@
                 </tbody>
             </table>
             @endif
-            @if (!$member1)
-            <form action="{{ route('storeMember1') }}" method="POST" class="text-center" enctype="multipart/form-data">
-                @csrf
-                <p class="form-limit text-center ms-4 fw-bold">Identitas Anggota 1</p>
-                <div class="input-form position-relative">
-                    <p class="label position-absolute">Nama TIM</p>
-                    <input type="text" name="team_name1" id="form-input"
-                        class="form-input px-4 bg-secondary bg-opacity-10"
-                        value="{{ auth()->user()->competition->name }}" required readonly>
-                    <span class="req position-absolute">*</span>
-                </div>
-                <div class="input-form position-relative">
-                    <p class="label position-absolute">Email Anggota 1</p>
-                    <input type="email" name="email1" id="form-input" class="form-input px-4" value="" required>
-                    <span class="req position-absolute">*</span>
-                </div>
-                <div class="input-form position-relative">
-                    <p class="label position-absolute">Nama Anggota 1</p>
-                    <input type="text" name="name1" id="form-input" class="form-input px-4" placeholder="" required>
-                    <span class="req position-absolute">*</span>
-                </div>
-                <div class="input-form position-relative">
-                    <p class="label position-absolute">Instansi Anggota 1</p>
-                    <select class="form-input px-4" name="agency1" id="agency1" onChange="getValue('1')">
-                        <option value="ums">Universitas Muhammadiyah Surakarta</option>
-                        <option value="umum">Umum</option>
-                    </select>
-                    <span class="req position-absolute"><i class="fa-solid fa-angle-down"></i></span>
-                </div>
-                <div id="from-ums-1" class="">
-                    <p class="form-limit text-start ms-4 fw-bold">KTM UMS Anggota 1</p>
-                    <div class="input-form-file position-relative d-flex align-items-center">
-                        <input type="file" name="ktm1" id="form-input-file" class="custom-file-input" placeholder="">
-                        <!-- <span class="req position-absolute">*</span> -->
-                    </div>
-                </div>
-                <p class="form-limit text-start ms-4 fw-bold">Kartu Identitas Anggota 1 (KTP/SIM/Paspor)</p>
-                <div class="input-form-file position-relative d-flex align-items-center">
-                    <input type="file" name="idcard1" id="form-input-file" class="custom-file-input" placeholder="">
-                    <!-- <span class="req position-absolute">*</span> -->
-                </div>
-                <input type="submit" value="Change" name="submit-anggota-1">
-            </form>
-            @endif
             @if (!$member2)
             <form action="{{ route('storeMember2') }}" method="POST" class="text-center" enctype="multipart/form-data">
                 @csrf
@@ -176,6 +132,50 @@
                     <!-- <span class="req position-absolute">*</span> -->
                 </div>
                 <input type="submit" value="Change" name="submit-anggota-2">
+            </form>
+            @endif
+            @if (!$member1)
+            <form action="{{ route('storeMember1') }}" method="POST" class="text-center" enctype="multipart/form-data">
+                @csrf
+                <p class="form-limit text-center ms-4 fw-bold">Identitas Anggota 1</p>
+                <div class="input-form position-relative">
+                    <p class="label position-absolute">Nama TIM</p>
+                    <input type="text" name="team_name1" id="form-input"
+                        class="form-input px-4 bg-secondary bg-opacity-10"
+                        value="{{ auth()->user()->competition->name }}" required readonly>
+                    <span class="req position-absolute">*</span>
+                </div>
+                <div class="input-form position-relative">
+                    <p class="label position-absolute">Email Anggota 1</p>
+                    <input type="email" name="email1" id="form-input" class="form-input px-4" value="" required>
+                    <span class="req position-absolute">*</span>
+                </div>
+                <div class="input-form position-relative">
+                    <p class="label position-absolute">Nama Anggota 1</p>
+                    <input type="text" name="name1" id="form-input" class="form-input px-4" placeholder="" required>
+                    <span class="req position-absolute">*</span>
+                </div>
+                <div class="input-form position-relative">
+                    <p class="label position-absolute">Instansi Anggota 1</p>
+                    <select class="form-input px-4" name="agency1" id="agency1" onChange="getValue('1')">
+                        <option value="ums">Universitas Muhammadiyah Surakarta</option>
+                        <option value="umum">Umum</option>
+                    </select>
+                    <span class="req position-absolute"><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <div id="from-ums-1" class="">
+                    <p class="form-limit text-start ms-4 fw-bold">KTM UMS Anggota 1</p>
+                    <div class="input-form-file position-relative d-flex align-items-center">
+                        <input type="file" name="ktm1" id="form-input-file" class="custom-file-input" placeholder="">
+                        <!-- <span class="req position-absolute">*</span> -->
+                    </div>
+                </div>
+                <p class="form-limit text-start ms-4 fw-bold">Kartu Identitas Anggota 1 (KTP/SIM/Paspor)</p>
+                <div class="input-form-file position-relative d-flex align-items-center">
+                    <input type="file" name="idcard1" id="form-input-file" class="custom-file-input" placeholder="">
+                    <!-- <span class="req position-absolute">*</span> -->
+                </div>
+                <input type="submit" value="Change" name="submit-anggota-1">
             </form>
             @endif
         </div>

@@ -5,24 +5,28 @@
             <h1 class="tag-logo">FOSTIFEST<br><span>Dashboard</span></h1>
         </div>
         <div class="nav-menu d-flex flex-column align-items-center justify-content-center">
-            <a href="{{ route('pesertaWebinar')}}" class="text-decoration-none w-100 my-1">
+            <a href="{{ route('pesertaWebinar')}}"
+                class="text-decoration-none w-100 my-1 {{ Route::is('pesertaWebinar') ? 'nav-active' : '' }}">
                 <div class="nav-item text-white text-start">
                     <p>Daftar Peserta Webinar</p>
                 </div>
             </a>
-            <a href="{{ route('pesertaLomba')}}" class="text-decoration-none w-100 my-1">
+            <a href="{{ route('pesertaLomba')}}"
+                class="text-decoration-none w-100 my-1 {{ Route::is('pesertaLomba') ? 'nav-active' : '' }}">
                 <div class="nav-item text-white text-start">
                     <p>Daftar Peserta Lomba</p>
                 </div>
             </a>
         </div>
         <div class="nav-menu d-flex flex-column align-items-center justify-content-center">
-            <a href="{{ route('notVerified')}}" class="text-decoration-none w-100 my-1">
+            <a href="{{ route('notVerified')}}"
+                class="text-decoration-none w-100 my-1 {{ Route::is('notVerified') ? 'nav-active' : '' }}">
                 <div class="nav-item text-white text-start">
                     <p>Peserta Lomba <span class="btn btn-primary">Menunggu ({{ $notVerif }})</span></p>
                 </div>
             </a>
-            <a href="{{ route('verified')}}" class="text-decoration-none w-100 my-1">
+            <a href="{{ route('verified')}}"
+                class="text-decoration-none w-100 my-1 {{ Route::is('verified') ? 'nav-active' : '' }}">
                 <div class="nav-item text-white text-start">
                     <p>Peserta Lomba <span class="btn btn-success">Terverifikasi ({{ $verif }})</span></p>
                 </div>

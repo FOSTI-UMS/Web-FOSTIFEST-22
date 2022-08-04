@@ -24,9 +24,9 @@
 </head>
 
 <body>
-    <section id="info" class="bg-secondary text-center py-1">
+    {{-- <section id="info" class="bg-secondary text-center py-1">
         <p class="info-title m-0">Sekarang batch ke-1 Pembayaran Webinar Rp.50.000,00,- Lomba Rp. 60.000,00,-</p>
-    </section>
+    </section> --}}
     <section id="navbar" class="sticky-top">
         <div class="container py-3 d-flex justify-content-between align-items-center position-relative">
             <div class="nav-logo d-flex justify-content-between">
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div id="nav-menu" class="nav-menu d-none d-lg-flex flex-row justify-content-between align-items-center">
-                <a href="" class="menu-nav text-decoration-none text-black">
+                <a href="https://fostiums.org/" class="menu-nav text-decoration-none text-black">
                     <svg class="pr-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -71,7 +71,7 @@
                     </svg>
                     GUIDE BOOK
                 </a>
-                <a href="" class="menu-nav text-decoration-none text-black">
+                <a href="#scroll" class="menu-nav text-decoration-none text-black">
                     <svg class="pr-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -88,7 +88,7 @@
         </div>
         <div id="nav-menu-out"
             class="nav-menu d-flex d-lg-none flex-column justify-content-between align-items-center hide">
-            <a href="" class="menu-nav text-decoration-none text-black">
+            <a href="https://fostiums.org/" class="menu-nav text-decoration-none text-black">
                 <svg class="pr-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -121,7 +121,7 @@
                 </svg>
                 GUIDE BOOK
             </a>
-            <a href="" class="menu-nav text-decoration-none text-black">
+            <a href="#scroll" class="menu-nav text-decoration-none text-black">
                 <svg class="pr-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -140,36 +140,37 @@
         <div class="container d-flex flex-column-reverse flex-lg-row" data-aos="fade-up" data-aos-duration="1500">
             <div class="text-banner">
                 <h1 class="banner-title">Cyber Security for Public Safety.</h1>
-                <p class="banner-subtitle">Webinar nasional dan perlombaan karya tulis ilmiah, peluang produktivitas
-                    dengan solusi IoT yang efisien. Menghadirkan Ono W. Purbo dan Hisyam Kamil membahas solusi dari IoT
-                    untuk sebuah problematika yang ada di lingkungan masyarakat</p>
+                <p class="banner-subtitle">Webinar nasional dan perlombaan Capture The Flag (CTF), sebuah praktik dalam
+                    melindungi sistem, jaringan,
+                    dan program dari serangan digital. Webinar kali ini menghadirkan Redho Maland sebagai Cyber Security
+                    Consultant & Instructor.</p>
             </div>
             <div class="image-banner position-relative">
-                <img src="asset/banner.png" class="banner-1 position-absolute">
+                <img src="asset/banner.png" class="banner-1 position-absolute d-lg-block d-none">
             </div>
         </div>
     </section>
+    <div id="scroll" class="my-5 py-5"></div>
     <section id="main" class="mt-3 pb-3 position-relative border border-1 border-white">
         <div class="webinar" data-aos="fade-up" data-aos-duration="1000">
             <div
                 class="container d-flex flex-column-reverse flex-lg-row position-relative align-items-center align-items-lg-start">
                 <div class="text-webinar">
                     <p class="non-button px-2 py-1">Webinar</p>
-                    <h1 class="main-title">Implement Cyber Security For a Safe Life</h1>
-                    <p class="main-subtitle">Webinar nasional dengan tema “Increase Oportunities productivity with An
-                        Efficient IoT Sollution” (Meningkatkan Peluang Prroduktivitas dengan Solusi IoT Yang Efisien).
-                        Menghadirkan Bambang Pamungkas membahas solusi dari IoT untuk sebuah problematika yang ada di
-                        dlingkungan masyarakat </p>
+                    <h1 class="main-title">Upgrade Your Digital Security</h1>
+                    <p class="main-subtitle">Webinar nasional dengan tema “Upgrade Your Digital Security” (Tingkatkan
+                        Keamanan Digital Anda). Menghadirkan <span class="fw-bold">Redho Maland</span> sebagai Cyber
+                        Security Consultant & Instructor, akan membahas bagaimana meningkatkan keamanan digital.</p>
                     <p class="fw-bold">*Webinar Rp 20.000 (FREE untuk Mahasiswa Universitas Muhammadiyah Surakarta)</p>
                     <a href="{{ route('webinar') }}"
                         class="main-button btn px-2 py-1 text-decoration-none d-inline-block">Daftar Webinar</a>
                 </div>
                 <div class="image-webinar position-relative">
                     <img src="asset/webinar-1.png" class="webinar-image-1 position-absolute">
-                    <div class="wrap-tag position-absolute">
+                    {{-- <div class="wrap-tag position-absolute">
                         <p class="name-tag px-2 py-1">Edo Maland</p>
                         <p class="name-tag px-2 py-1">IT Consultant</p>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -177,7 +178,7 @@
             <div
                 class="container d-flex flex-column flex-lg-row position-relative align-items-center align-items-lg-start">
                 <div class="image-lomba position-relative text-center text-md-start">
-                    <img src="asset/lomba-1.png" class="lomba-image-1 position-absolute">
+                    <img src="asset/lomba-1.png" class="lomba-image position-absolute">
                 </div>
                 <div class="text-lomba text-end">
                     <p class="non-button px-2 py-1">Capture The Flag</p>
@@ -192,11 +193,14 @@
                 </div>
             </div>
         </div>
+        <div class="timeline w-100 d-flex justify-content-center" style="margin-top:150px">
+            <img src="asset/timeline.png" class="d-block" style="left: auto; right: auto;; max-width: 100%;">
+        </div>
         <div class="wrap-sponsor position-relative" data-aos="fade-up" data-aos-duration="1000">
             <div class="container text-center d-flex flex-column align-items-center">
                 <h1 class="media-title">Supported By</h1>
                 <div class="media-logo d-flex flex-wrap justify-content-around w-75">
-                    <a href="#" target="_blank">
+                    <!-- <a href="#" target="_blank">
                         <img src="asset/gojek.png" alt="">
                     </a>
                     <a href="#" target="_blank">
@@ -204,7 +208,8 @@
                     </a>
                     <a href="#" target="_blank">
                         <img src="asset/google.png" alt="">
-                    </a>
+                    </a> -->
+                    <h1>Open Sponsorship</h1>
                 </div>
             </div>
         </div>
@@ -214,12 +219,13 @@
             <div class="container text-center d-flex flex-column align-items-center">
                 <h1 class="media-title">Media Patner</h1>
                 <div class="media-logo d-flex flex-wrap justify-content-around align-items-center w-75">
-                    <a href="#" target="_blank">
+                    <!-- <a href="#" target="_blank">
                         <img src="asset/sopolos.png" class="media-over" alt="">
                     </a>
                     <a href="#" target="_blank">
                         <img src="asset/rapma.png" alt="">
-                    </a>
+                    </a> -->
+                    <h1>Open Media Patner</h1>
                 </div>
             </div>
         </div>
@@ -229,11 +235,11 @@
             <h1 class="sosmed-title">Frequently Asked Questions</h1>
             <p class="sosmed-subtitle">Jika ada pertanyaan mengenai lomba maupun webinar dapat menghubungi contact
                 person di bawah ini</p>
-            <div class="sosmed-image d-flex w-50 justify-content-around">
+            <div class="sosmed-image d-flex justify-content-around">
                 <a href="https://www.instagram.com/fosti_ums/" target="_blank">
                     <img src="asset/instagram.png" alt="">
                 </a>
-                <a href="https://www.twitter.com" target="_blank">
+                <a href="https://www.twitter.com" target="_blank" class="mx-3">
                     <img src="asset/twitter.png" alt="">
                 </a>
                 <a href="https://wa.me" target="_blank">

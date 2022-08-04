@@ -62,12 +62,6 @@
                     <span class="req position-absolute"><i class="fa-solid fa-angle-down"></i></span>
                 </div>
                 <input type="hidden" name="oldImage" value="{{ $leader->ktm }}">
-                @if($leader->ktm != '-')
-                <img src="{{ asset('/storage/' . $leader->ktm) }}" class="img-preview d-block mb-4"
-                    style="width:200px;height:175px;">
-                @else
-                <img class="img-preview img-fluid mb-4">
-                @endif
                 <div id="from-ums" class="">
                     <p class="form-limit text-start ms-4 fw-bold">KTM UMS</p>
                     <div class="input-form-file position-relative d-flex align-items-center">
@@ -76,12 +70,6 @@
                     </div>
                 </div>
                 <input type="hidden" name="oldImage2" value="{{ $leader->idcard }}">
-                @if($leader->idcard != '-')
-                <img src="{{ asset('/storage/' . $leader->idcard) }}" class="img-preview d-block mb-4"
-                    style="width:200px;height:175px;">
-                @else
-                <img class="img-preview img-fluid mb-4">
-                @endif
                 <p class="form-limit text-start ms-4 fw-bold">Kartu Identitas (KTP/SIM/Paspor)</p>
                 <div class="input-form-file position-relative d-flex align-items-center">
                     <input type="file" name="idcard" id="form-input-file" class="custom-file-input" placeholder="">

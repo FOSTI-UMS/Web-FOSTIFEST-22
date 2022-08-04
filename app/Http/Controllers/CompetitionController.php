@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Competition;
 use Illuminate\Http\Request;
+use App\Exports\teamCompExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class CompetitionController extends Controller
 {
@@ -33,5 +35,10 @@ class CompetitionController extends Controller
         ]);
 
         return redirect('/');
+    }
+
+    public function export()
+    {
+        return Excel::download(new teamCompExport, 'tim_lomba.xlsx');
     }
 }

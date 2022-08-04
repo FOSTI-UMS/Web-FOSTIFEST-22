@@ -29,7 +29,7 @@
     </div>
     <div class="main-content d-flex justify-content-center align-items-center">
         <div class="container d-flex flex-column align-items-center justify-content-center position-relative">
-            <a href="#" class="btn btn-warning text-decoration-none text-white">Cetak</a>
+            <a href="{{ route('exportExcelMem') }}" class="btn btn-warning text-decoration-none text-white">Cetak</a>
             <table id="example" class="table table-striped w-100 text-center" style="width:100%">
                 <thead>
                     <tr>

@@ -30,7 +30,7 @@
     <div class="main-content d-flex justify-content-center align-items-center">
         <div class="container d-flex align-items-center position-relative">
             <h1 class="text-center">Sebelum mengikuti lomba, Identitas Tim {{ auth()->user()->competition->name }} harap
-                diisi dulu dek</h1>
+                diisi dulu ya</h1>
         </div>
     </div>
     <div class="nav-bot p-2 d-flex justify-content-center align-items-center">

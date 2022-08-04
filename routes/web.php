@@ -32,12 +32,17 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 // Admin
 Route::get('/dashboard', [AdminController::class, 'index'])->name('admin-page')->middleware('auth', 'checkAdmin');
 Route::get('/peserta-webinar', [AdminController::class, 'webinar'])->name('pesertaWebinar')->middleware('auth', 'checkAdmin');
+Route::post('/peserta-webinar/sendEmail/{webinar}', [AdminController::class, 'sendMailUser'])->name('sendEmailUser')->middleware('auth', 'checkAdmin');
 Route::get('/peserta-lomba', [AdminController::class, 'lomba'])->name('pesertaLomba')->middleware('auth', 'checkAdmin');
 Route::get('/peserta-lomba-notverified', [AdminController::class, 'notverified'])->name('notVerified')->middleware('auth', 'checkAdmin');
 Route::get('/form-verification/{competition}', [AdminController::class, 'formVerification'])->name('formVerification')->middleware('auth', 'checkAdmin');
 Route::put('/peserta-lomba-notverified/{competition}', [AdminController::class, 'verifCompetition'])->name('verificationComp')->middleware('auth', 'checkAdmin');
 Route::get('/peserta-lomba-verified', [AdminController::class, 'verified'])->name('verified')->middleware('auth', 'checkAdmin');
 Route::delete('/peserta-webinar/{webinar}', [AdminController::class, 'destroyWebinar'])->name('deleteWebinar')->middleware('auth', 'checkAdmin');
+Route::get('/peserta-webinar-export', [WebinarController::class, 'export'])->name('exportExcelWeb')->middleware('auth', 'checkAdmin');
+Route::get('/peserta-lomba-export', [ParticipantController::class, 'export'])->name('exportExcelMem')->middleware('auth', 'checkAdmin');
+Route::get('/tim-lomba-export', [CompetitionController::class, 'export'])->name('exportExcelTeam')->middleware('auth', 'checkAdmin');
+
 
 // Webinar
 Route::get('/webinar', [WebinarController::class, 'index'])->name('webinar');
