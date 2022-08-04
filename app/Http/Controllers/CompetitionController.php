@@ -41,4 +41,10 @@ class CompetitionController extends Controller
     {
         return Excel::download(new teamCompExport, 'tim_lomba.xlsx');
     }
+
+    public function downloadRule()
+    {
+        $file = "rulebook/RULEBOOK_CAPTURE_THE_FLAG_CTF_FOSTIFEST_2022.pdf";
+        return response()->download($file);
+    }
 }

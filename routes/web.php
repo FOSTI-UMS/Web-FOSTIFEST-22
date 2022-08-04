@@ -23,6 +23,7 @@ use App\Http\Controllers\ParticipantController;
 // });
 
 Route::get('/', [WebinarController::class, 'landing'])->name('landing-page');
+Route::get('/download-rulebook', [CompetitionController::class, 'downloadRule'])->name('downloadRules');
 
 // Login
 Route::get('/login', [LoginController::class, 'index'])->name('login-page')->middleware('guest');
@@ -43,7 +44,6 @@ Route::get('/peserta-webinar-export', [WebinarController::class, 'export'])->nam
 Route::get('/peserta-lomba-export', [ParticipantController::class, 'export'])->name('exportExcelMem')->middleware('auth', 'checkAdmin');
 Route::get('/tim-lomba-export', [CompetitionController::class, 'export'])->name('exportExcelTeam')->middleware('auth', 'checkAdmin');
 
-
 // Webinar
 Route::get('/webinar', [WebinarController::class, 'index'])->name('webinar');
 Route::post('/webinar', [WebinarController::class, 'store'])->name('registrationWebinar');
@@ -51,6 +51,7 @@ Route::post('/webinar', [WebinarController::class, 'store'])->name('registration
 // Competition
 Route::get('/competition', [CompetitionController::class, 'index'])->name('competition');
 Route::post('/competition', [CompetitionController::class, 'store'])->name('registrationComp');
+
 // Dashboard Peserta
 Route::get('/dashboard-peserta', [ParticipantController::class, 'dashboard'])->name('dashboardCompetition')->middleware('auth', 'checkParticipant');
 Route::get('/dashboard-peserta/tim', [ParticipantController::class, 'team'])->name('team')->middleware('auth', 'checkParticipant');

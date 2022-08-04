@@ -37,6 +37,7 @@
                         <th>Nama Tim</th>
                         <th>Email</th>
                         <th>Pembayaran</th>
+                        <th>Tanggal Pendaftaran</th>
                         <th>Setting</th>
                     </tr>
                 </thead>
@@ -47,6 +48,7 @@
                         <td>{{ $cp->name }}</td>
                         <td>{{ $cp->email }}</td>
                         <td><img src="{{ asset('/storage/'. $cp->payment) }}" style="width:100px;height:75px;"></td>
+                        <td>{{ $cp->created_at }}</td>
                         <td><a href="{{ route('formVerification', $cp->id) }}"
                                 class="btn btn-success text-decoration-none text-white"
                                 onclick="return confirm('Are you sure you want to verif this?')">Verifikasi</a></td>

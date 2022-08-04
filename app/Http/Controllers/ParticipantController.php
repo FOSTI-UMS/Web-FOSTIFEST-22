@@ -42,7 +42,8 @@ class ParticipantController extends Controller
 
     public function guideline()
     {
-        return view('guideline');
+        $file = "rulebook/RULEBOOK_CAPTURE_THE_FLAG_CTF_FOSTIFEST_2022.pdf";
+        return response()->download($file);
     }
 
     public function storeLeader(Request $request)
